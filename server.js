@@ -32,14 +32,11 @@ app.get("/movie", function handleGetMovie(req, res) {
     response = response.filter((movie) =>
       movie.genre.toLowerCase().includes(req.query.genre.toLowerCase())
     );
-    debugger;
   }
   //filter by country
   if (req.query.country) {
     response = response.filter((movie) =>
-      movie.country
-        .toLowerCase()
-        .includes(req.query.country.toLocaleLowerCase())
+      movie.country.toLowerCase().includes(req.query.country.toLowerCase())
     );
   }
 
